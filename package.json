@@ -1,0 +1,30 @@
+{
+	"name": "frame_uni_ali",
+	"id": "frame_uni_ali-TestObject",
+	"version": "0.0.1",
+	"description": "测试 ali login",
+	"_dp_type": "nativeplugin",
+	"_dp_nativeplugin": {
+		"ios": {
+			"plugins": [{
+				"type": "module",
+				"name": "frame_uni_ali-TestObject",
+				"class": "TestObject"
+			}],
+			"frameworks": ["ATAuthSDK.framework"],
+			"integrateType": "framework",
+			"deploymentTarget": "9.0",
+            "resources": ["ATAuthSDK.bundle"]
+		},
+		"android": {
+			"hooksClass": "com.seeger.library.AuthAppProxy",
+			"plugins": [{
+				"type": "module",
+				"name": "frame_uni_ali-TestObject",
+				"class": "com.seeger.library.AuthModule"
+			}],
+			"integrateType": "aar",
+			"minSdkVersion": 19
+		}
+	}
+}
